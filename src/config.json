@@ -1,0 +1,42 @@
+{
+	"adjustInterval":1.5,
+	"pauseTime":15000,
+	"pauseWhenDiskStart":true,
+	"pinButtonDisk":0,
+	"pinButtonFan":2,
+	"pinLedDisk":3,
+	"pinLedFan":4,
+	"pinPwmFan":1,
+	"pinRelayEN1":6,
+	"pinRelayEN2":5,
+	"sysMaxtemp":50,
+	"sysMintemp":30,
+	"serviceList":[
+		{
+			"serviceStart":"service smbd start",
+			"serviceStatus":"service smbd status",
+			"serviceStatusCheck":"Active: active (running)",
+			"serviceStop":"service smbd stop"
+		},
+		{
+			"serviceStart":"service transmission-daemon start",
+			"serviceStatus":"service transmission-daemon status",
+			"serviceStatusCheck":"Active: active (running)",
+			"serviceStop":"service transmission-daemon stop"
+		},
+		{
+			"serviceStart":"deluged",
+			"serviceStatus":"ps -ef | grep deluged",
+			"serviceStatusCheck":"/usr/bin/deluge",
+			"serviceStop":"pkill deluged"
+		}
+	],
+	"diskInfoList":[
+		{
+			"PARTUUID":"",
+			"PTUUID":"",
+			"UUID":"76e7fb44-1a8d-473b-a6fe-21b4a41ef20d",
+			"mountPoint":"/media/pi/wd/"
+		}
+	]
+}
