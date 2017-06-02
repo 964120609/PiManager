@@ -58,3 +58,6 @@
 	]
 }
 ```
+
+	将Java作为服务启动
+ [Java Service Wrapper](https://wrapper.tanukisoftware.com/doc/english/download.jsp "树莓派2B可以下载armhf版本")
